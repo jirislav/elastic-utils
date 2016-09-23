@@ -1,0 +1,2 @@
+#!/bin/bash
+ELASTIC_URL=http://sk8s-w02.dev:31015
