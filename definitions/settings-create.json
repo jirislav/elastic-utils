@@ -1,0 +1,28 @@
+{
+	"analysis": {
+		"tokenizer": {
+			"log_message_tokenizer": {
+				"type": "pattern",
+				"pattern": ".py:|[,:] | [:-] |[;\\(){}'\"]"
+			}
+		},
+		"filter": {
+			"log_message_ngram_filter": {
+				"type": "edgeNGram",
+				"min_gram": 3,
+				"max_gram": 64
+			}
+		},
+		"analyzer": {
+			"log_message_analyzer": {
+				"type":      "custom",
+				"tokenizer": "log_message_tokenizer",
+				"filter":    ["lowercase", "asciifolding", "log_message_ngram_filter"]
+			},
+			"grid_analyzer" : {
+				"type": "pattern",
+				"pattern": ":"
+			}
+		}
+	}
+}

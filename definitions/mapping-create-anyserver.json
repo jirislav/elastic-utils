@@ -1,0 +1,42 @@
+{
+	"settings" : SETTINGS_PLACEHOLDER,
+	"mappings" : {
+		"logs": {
+			"properties": {
+				"timestamp": {
+					"type": "date",
+					"format": "yyyy/MM/dd HH:mm:ss||epoch_millis"
+				},
+				"stamp": {
+					"type": "string"
+				},
+				"origin_component": {
+					"type": "string"
+				},
+				"pid": {
+					"type": "integer"
+				},
+				"grid": {
+					"type": "string",
+					"analyzer": "grid_analyzer"
+				},
+				"user_id": {
+					"type": "long"
+				},
+				"client": {
+					"type": "string"
+				},
+				"elapsed": {
+					"type": "float"
+				},
+				"status": {
+					"type": "integer"
+				},
+				"log_message": {
+					"type": "string",
+					"analyzer": "log_message_analyzer"
+				}
+			}
+		}
+	}
+}
